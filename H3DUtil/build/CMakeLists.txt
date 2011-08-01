@@ -56,6 +56,11 @@ set(requiredLibs)
 
 set(CMAKE_MODULE_PATH ${H3DUtil_SOURCE_DIR}/modules)
 
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+	find_library(LINUX_LIBDL_LIBRARY dl)
+	list(APPEND requiredLibs "${LINUX_LIBDL_LIBRARY}")
+endif()
+
 find_package(FreeImage)
 if(FREEIMAGE_FOUND)
 	set(HAVE_FREEIMAGE 1)
