@@ -1,6 +1,4 @@
-if(WIN32)
-	cmake_minimum_required(VERSION 2.6.0)
-endif()
+cmake_minimum_required(VERSION 2.6.0)
 project(H3DUtil)
 
 # Add a cache variable GENERATE_CPACK_PROJECT to have the choice of generating a project
@@ -37,7 +35,6 @@ set(H3DUTIL_FULL_VERSION
 	${H3DUTIL_MAJOR_VERSION}.${H3DUTIL_MINOR_VERSION}.${H3DUTIL_BUILD_VERSION})
 
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/include/H3DUtil/")
-include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 
 # Add all sources, they are added to a variable called H3DUTIL_SRCS defined
 # in the included file. All header files are added to a variable called
