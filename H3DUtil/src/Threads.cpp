@@ -34,6 +34,7 @@
 #include <algorithm>
 #include <vector>
 #include <iostream>
+#include <unistd.h>
 
 using namespace std;
 #include <H3DUtil/Threads.h>
